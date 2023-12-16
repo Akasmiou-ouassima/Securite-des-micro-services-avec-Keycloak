@@ -1,6 +1,6 @@
 # Sécurisation des Micro services avec Keycloak
 
-**Plan :**
+**_Plan_ :**
 <ul>
     <li>Téléchargement de Keycloak et installation - lien : <a href="https://www.keycloak.org/downloads.html">https://www.keycloak.org/downloads.html</a></li>
     <li>Démarrage Keycloak</li>
@@ -24,7 +24,7 @@
 </ul>
 
 <p align="center">
-  <img src="captures/img_35.png" width="600">
+  <img src="captures/img_35.png" width="700">
 </p>
 
 ## Démarrage de Keycloak
