@@ -1,121 +1,126 @@
 # Sécurisation des Micro services avec Keycloak
 
 *Plan :*
-    - Téléchargement de Keycloak et installation lien : https://www.keycloak.org/downloads.html
-    - Démarrage Keycloak
-    - Création d'un compte Admin
-    - Création d'une Realm
-    - Création d'un client à sécuriser
-    - Création des utilisateurs
-    - Création des rôles
-    - Affectation des rôles aux utilisateurs
-    - Dans Postman :
-        - Test l'authentification via password et username
-        - Analyse les contenus de JWT Access Token 
-        - Teste l'authentification avec Refresh Token
-        - Teste l'authentification avec client ID et client secret
-    - Sécuriser Les Micro services wallet-service, ebank-service
-    - Teste les endpoints de micro-services ebank-service par HTTP Client
-    - Teste les endpoints de micro-services wallet-service par GraphQL
+<ul>
+    <li>Téléchargement de Keycloak et installation - lien : <a href="https://www.keycloak.org/downloads.html">https://www.keycloak.org/downloads.html</a></li>
+    <li>Démarrage Keycloak</li>
+    <li>Création d'un compte Admin</li>
+    <li>Création d'une Realm</li>
+    <li>Création d'un client à sécuriser</li>
+    <li>Création des utilisateurs</li>
+    <li>Création des rôles</li>
+    <li>Affectation des rôles aux utilisateurs</li>
+    <li>Dans Postman :
+        <ul>
+            <li>Test l'authentification via password et username</li>
+            <li>Analyse les contenus de JWT Access Token</li>
+            <li>Teste l'authentification avec Refresh Token</li>
+            <li>Teste l'authentification avec client ID et client secret</li>
+        </ul>
+    </li>
+    <li>Sécuriser les Micro services wallet-service, ebank-service</li>
+    <li>Teste les endpoints de micro-services ebank-service par HTTP Client</li>
+    <li>Teste les endpoints de micro-services wallet-service par GraphQL</li>
+</ul>
 
 <p align="center">
-  <img src="captures/img_35.png" width="500">
+  <img src="captures/img_35.png" width="600">
 </p>
 
 ## Démarrage de Keycloak
 <p align="center">
-  <img src="captures/img.png" width="500">
+  <img src="captures/img.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_1.png" width="500">
+  <img src="captures/img_1.png" width="600">
 </p>
 
 ## Connecter à Keycloak
 <p align="center">
-  <img src="captures/img_2.png" width="500">
+  <img src="captures/img_2.png" width="600">
 </p>
 
 ## Créer un nouveau realm
 <p align="center">
-  <img src="captures/img_3.png" width="500">
+  <img src="captures/img_3.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_4.png" width="500">
+  <img src="captures/img_4.png" width="600">
 </p>
 
 ## Créer un nouveau client
 <p align="center">
-  <img src="captures/img_5.png" width="500">
+  <img src="captures/img_5.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_6.png" width="500">
+  <img src="captures/img_6.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_7.png" width="500">
+  <img src="captures/img_7.png" width="600">
 </p>
 
 ## Créer un nouveau Utilisateur
 <p align="center">
-  <img src="captures/img_8.png" width="500">
+  <img src="captures/img_8.png" width="600">
 </p>
 
 ## Attribuer un mot de passe à l'utilisateur
 <p align="center">
-  <img src="captures/img_9.png" width="500">
+  <img src="captures/img_9.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_10.png" width="500">
+  <img src="captures/img_10.png" width="600">
 </p>
 
 ## Créer un nouveau rôle
 <p align="center">
-  <img src="captures/img_11.png" width="500">
+  <img src="captures/img_11.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_12.png" width="500">
+  <img src="captures/img_12.png" width="600">
 </p>
 
 ## Affecter le rôle à l'utilisateur
 <p align="center">
-  <img src="captures/img_13.png" width="500">
+  <img src="captures/img_13.png" width="600">
 </p>
 
 ## Entrer Realm Settings pour récupérer le token
 <p align="center">
-  <img src="captures/img_14.png" width="500">
+  <img src="captures/img_14.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_15.png" width="500">
+  <img src="captures/img_15.png" width="600">
 </p>
 
 ## 1 ere solution : authentification via password et username
 <p align="center">
-  <img src="captures/img_16.png" width="500">
+  <img src="captures/img_16.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_17.png" width="500">
+  <img src="captures/img_17.png" width="600">
 </p>
 
 ## 2 éme solution : authentification via refresh token
 <p align="center">
-  <img src="captures/img_18.png" width="500">
+  <img src="captures/img_18.png" width="600">
 </p>
 
 ## activer client authentification =>l’application qui envoie la requête qui va authentifier et n’est pas l’utilisateur
 <p align="center">
-  <img src="captures/img_19.png" width="500">
+  <img src="captures/img_19.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_20.png" width="500">
+  <img src="captures/img_20.png" width="600">
 </p>
 
 # Sécuriser Les Micro services wallet-service, ebank-service 
@@ -180,19 +185,19 @@ return new RegisterSessionAuthenticationStrategy(new SessionRegistryImpl());
 ```
 ## Teste les endpoints de micro-services ebank-service par HTTP Client
 <p align="center">
-  <img src="captures/img_21.png" width="500">
+  <img src="captures/img_21.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_22.png" width="500">
+  <img src="captures/img_22.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_23.png" width="500">
+  <img src="captures/img_23.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_24.png" width="500">
+  <img src="captures/img_24.png" width="600">
 </p>
 
 ## Teste les endpoints de micro-services wllet-service par GraphQL
@@ -200,26 +205,26 @@ return new RegisterSessionAuthenticationStrategy(new SessionRegistryImpl());
 **mutation => tout ce qui est post, put, delete…**
 
 <p align="center">
-  <img src="captures/img_25.png" width="500">
+  <img src="captures/img_25.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_26.png" width="500">
+  <img src="captures/img_26.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_27.png" width="500">
+  <img src="captures/img_27.png" width="600">
 </p>
 
 **car on envoie la requete vers ebank qui est sécurisé**
 <p align="center">
-  <img src="captures/img_28.png" width="500">
+  <img src="captures/img_28.png" width="600">
 </p>
 
 ## Wallet Frontend Angular Secured
 **Authentification via Keycloak**
 <p align="center">
-  <img src="captures/img_34.png" width="500">
+  <img src="captures/img_34.png" width="600">
 </p>
 
 ```bash
@@ -227,22 +232,22 @@ npm install --save bootstrap bootstrap-icons
 npm install --save keycloak-js keycloak-angular
 ```
 <p align="center">
-  <img src="captures/img_29.png" width="500">
+  <img src="captures/img_29.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_30.png" width="500">
+  <img src="captures/img_30.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_31.png" width="500">
+  <img src="captures/img_31.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_32.png" width="500">
+  <img src="captures/img_32.png" width="600">
 </p>
 
 <p align="center">
-  <img src="captures/img_33.png" width="500">
+  <img src="captures/img_33.png" width="600">
 </p>
 
